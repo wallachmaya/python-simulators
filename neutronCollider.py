@@ -111,8 +111,6 @@ def sig_pn(R,e,A):
     sigp2n = sig*(Fnn/(Fp+Fn+Fa+Fnn))
     return sigpn, sig, sigpa, sigp2n
 
-import math
-from scipy.constants import Planck, alpha, e, epsilon_0, speed_of_light, m_p, m_n, c
 from random import choices
 
 Type = 'n'
