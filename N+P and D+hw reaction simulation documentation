@@ -1,50 +1,49 @@
-    This project was made to simulate a few two-body interactions like Photodisitegration, Capture, Pair Production, and Scattering. One 
-simulated situation is neutron-proton reactions, this is when a neutron and proton collide which, results in scattering or capture. The 
-other possible circumstance is deuteron-photon reactions. This is when a deuteron and photon collide which, results in scattering, 
-photodisintegration, or pair production.
+    	This project was made to simulate two-body interactions like Photodisitegration, Capture, Internal Conversion emission of a light quantum, and Scattering. One simulated 
+situation is neutron-proton reactions. This is when a neutron and proton collide which can result in scattering or capture. The other circumstance is when a deuteron and 
+photon react. This is when a deuteron and photon collide which results in scattering, photodisintegration, internal conversion, or light quantum emission.
 
-			                        Information about the Reactions
+                      						Information about the Reactions
 
-    Scattering is when two particles interact and the incident particle is deflected. If the incident particle has the same energy as it 
-did before, it's called elastic scattering but, if the energy is different then it's inelastic. When a photon is being scattered, it's 
-called Compton scattering. In this project, the probability of scattering means the probability of both elastic and inelastic scattering.
+    	Scattering is when subatomic particles interact with each other and the incident particle is deflected. If the incident particle has the same energy as it did before 
+it's called elastic scattering. When the energy is different then it's inelastic. Also, when a photon is being scattered it's called Compton scattering. In this project when it 
+mentions the probability of scattering it means the probability of both elastic and inelastic scattering.
 
-    Capture is when particles collide and merge to form a heavier nucleus, this can result in the emission of a gamma-ray.
+    Capture is when a nucleus and neutron collide to form a heavier nucleus. This can result in the emission of a gamma-ray.
 
-    Photodisintegration is the process of photons colliding with nuclei (in our case a deuteron) and the nucleus emits one or more 
-particles. Typically, the higher the energy of the photon the lower the probability of the reaction occurring.
+    Photodisintegration is when a photon collides with a nucleus (in our case a deuteron) and the nucleus emits one or more particles. Typically the higher the photon energy 
+the lower the probability of the reaction occurring.
 
-    Pair production is when a positron and electron are created from a photon after it collides with a nucleus, sometimes it leaves 
-it in an excited state.
+    Internal conversion is when an excited nucleus interacts electromagnetically with orbital electrons of the atom. This causes the electron to be emitted from the atom.
 
-                                                    What does the code do?
+    Light quantum emission is when an excited nucleus interacts electromagnetically with one of the orbital electrons of the atom. This will cause a light quantum to emit.
 
-    The code simulates neutron-proton collisions and photon deuteron collisions. After every test, the program outputs the 
-probability of each reaction occurring, the reaction that occurred, the amount of times each reaction has occurred, the energy 
-of the incident particle, and for N+P -> D+hw reactions it shows the amount of energy generated from the reaction. An example of 
-the output for the neutron-proton collision simulation is:
+                              					    What does the code do?
 
-Test 34
-0.7 Kilo Joule
-['cap E']
-[0.0012584582126272963, 0.04609235713000955, 0.9526491846573631]
-1.442065269444526e-39 1.442065269444526e-39 in MeV
-4 149 2663
+    The code runs the simulation of neutron-proton collisions and photon deuteron collisions. After every test, the program outputs the probability of each reaction occurring, 
+the reaction that did occur, the number of times each reaction has occurred, the energy of the incident particle, and for N+P -> D+hw reactions it shows how much energy was 
+generated from the reaction. An example of the output for the neutron-proton collision simulation is:
 
-    The first line shows the test number, the next line shows the amount of energy the incident particle had in Kilo Joules, the third 
-shows the reaction that occurred, the line below shows the probability of each reaction happening, the second to last line shows 
-how much energy was emitted from the reaction in MeV, and the final line shows how many times each reaction had previously occurred 
-in the order: electric dipole capture, magnetic dipole capture, then scattering.
+Test 177
+1.713909039645192 Kilo Joule
+['cap M']
+[0.20283624036693002, 0.79716375963307]
+The magnetic radiation emitted per second 6.346021679750686e-39
+66 112
 
-An example of the output for the photon-deuteron collision simulation is:
+    The top line shows the test number, the second line shows the amount of energy the incident particle had in Kilo Joules, the third shows the reaction that occurred in that
+test, the line below that shows the probability of each reaction happening, the second to last line shows how much energy was emitted from the reaction in MeV, and the final 
+line shows how many times each reaction had previously occurred in the order: magnetic dipole capture then scattering.
 
-Test 34
-3.7e-17 eV
-['pair production']
-[0.16175548168930473, 1.1643702050307509e-17, 0.42910624486861837, 0.4091382734420769]
-81 0 68 108
+An example of the output for the photon - deuteron collision simulation is:
 
-    The top line shows the test number, the next line shows the amount of energy the incident particle had in eV, the third shows the 
-reaction that occurred, the line below that shows the probability of each reaction happening, and the final line shows how many 
-times each reaction had previously occurred in the order: electric dipole photodisintegration, magnetic dipole photodisintegration, 
-Compton scattering, then pair production.
+Test 4998
+0.0007222222222222223 eV
+['dis M']
+[0.5564656551577575, 0.4435343448422425, 9.624422818617563e-24, 2.7529812436455745e-77]
+The magnetic radiation emitted per second 3.3117938740684603e-96
+2758 2241 0 0
+
+    The top line shows the test number, the second line shows the amount of energy the incident particle had in eV, the third shows the reaction that occurred in that test, the 
+line below that shows the probability of each reaction happening, the second to last line shows how much energy was emitted from the reaction in MeV, and the final line 
+shows how many times each reaction had previously occurred in the order: magnetic dipole photodisintegration, Compton scattering, light quantum emission, then internal 
+conversion.
